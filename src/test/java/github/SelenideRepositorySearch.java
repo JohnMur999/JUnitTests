@@ -11,7 +11,6 @@ public class SelenideRepositorySearch {
     @Test
     void shouldFindSelenideRepositoryAtTheTop() {
         Configuration.browser = FIREFOX;
-        Configuration.holdBrowserOpen = true;
         Selenide.open("https://github.com/");
         Selenide.$("[data-target='qbsearch-input.inputButton']").click();
         Selenide.$("[id=query-builder-test]").setValue("selenide").pressEnter();
